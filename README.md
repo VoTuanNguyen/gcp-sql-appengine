@@ -5,10 +5,10 @@ contain sample code for how to deploy a Spring jpa project connect cloud SQL to 
 
 # Setup
 
-* Step 1: Create instance cloud SQL
+### Step 1: Create instance cloud SQL
 Go to [Cloud SQL](https://console.cloud.google.com/sql/instances) to create instance
 
-* Step 2: Edit pom.xml
+### Step 2: Edit pom.xml
 - Connect mysql:
     ```sh
     <!--mysql connect-->
@@ -27,6 +27,7 @@ Go to [Cloud SQL](https://console.cloud.google.com/sql/instances) to create inst
     <!--./-->
     ```
 - Connect postgresql:
+
     ```sh
      <!--dependencies connect postgresql-->
     <dependency>
@@ -42,7 +43,7 @@ Go to [Cloud SQL](https://console.cloud.google.com/sql/instances) to create inst
     <!--./-->
     ```
 
-* Step 3: Edit appplication.properties
+### Step 3: Edit appplication.properties
 
 - <database_name>: Name of database you use
 - <instance_connection_name>: You can see and copy it at overview tab of sql instance
@@ -82,11 +83,11 @@ Go to [Cloud SQL](https://console.cloud.google.com/sql/instances) to create inst
 
 * Before run locally you should run command:
     ```sh
-    mvn clean
+    $ mvn clean
     ```
 * You can run locally by run command:
     ```sh    
-    mvn -DskipTests spring-boot:run
+    $ mvn -DskipTests spring-boot:run
     ```
 * You can see result at Preview on port 8080 by click eye icon at top-right cloud shell
 
@@ -105,9 +106,9 @@ Go to [Cloud SQL](https://console.cloud.google.com/sql/instances) to create inst
     ```
 * And now to deploy to App Engine Service by run command:
     ```sh
-    mvn -DskipTests appengine:deploy
+    $ mvn -DskipTests appengine:deploy
     ```
 * To show link result when deploy successfully:
     ```sh
-    glcoud browse app
+    $ glcoud browse app
     ```
